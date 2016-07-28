@@ -1,0 +1,10 @@
+.tmp/
+.idea/
+.cache/
+coverage/
+dist/
+build/
+node_modules/
+jspm_packages/
+bower_components/
+output/
