@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "productName": "App",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "https://github.com/dyammarcano/electron-angular2-structure.git",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+	"main": "index.js",
+	"registry":"https://api-5622245.rhcloud.com"
+}
