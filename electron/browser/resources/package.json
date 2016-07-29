@@ -1,15 +1,33 @@
 {
-  "name": "app",
-  "productName": "App",
-  "version": "0.0.0",
-  "description": "",
+  "name": "dashboard",
+  "version": "1.0.22",
   "license": "MIT",
-  "repository": "https://github.com/dyammarcano/electron-angular2-structure.git",
-  "author": {
-    "name": "",
-    "email": "",
-    "url": ""
+  "main": "browser.js",
+  "dependencies": {
+    "devtron": "^1.2.1",
+    "bootstrap": "^4.0.0-alpha.3",
+    "electron-updater": "^0.3.1",
+    "font-awesome": "^4.6.1"
   },
-	"main": "index.js",
-	"registry":"https://api-5622245.rhcloud.com"
+  "description": "dashboard admin panel desktop app",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyammarcano/electron-angular2-structure.git"
+  },
+  "keywords": [
+    "electron",
+    "angular 2",
+    "webpack",
+    "jasmine",
+    "karma"
+  ],
+  "author": "Dyam Marcano",
+  "bugs": {
+    "url": "https://github.com/dyammarcano/electron-angular2-structure/issues"
+  },
+  "homepage": "https://github.com/dyammarcano/electron-angular2-structure#readme"
 }
