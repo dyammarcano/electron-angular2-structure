@@ -1,39 +1,20 @@
-const { app, BrowserWindow, Tray } = require('electron')
+const { app, BrowserWindow, Tray } = require('electron');
 const { updater } = require('electron-updater')
 
-require('devtron').install()
-
-var mainWindow = null
- 
 app.on('ready', () => {
     const {width, height} = require('electron').screen.getPrimaryDisplay().workAreaSize
+  let mainWindow = new BrowserWindow({
+    icon: "icons/128x128.png",
+    minHeight: 600,
+    minWidth: 800,
+    width,
+    height
+  });
+  mainWindow.maximize();
 
-    let configWindow = {
-        minHeight: 600,
-        minWidth: 800,
-        width,
-        height,
-        backgroundColor: '#2e2c29' 
-    }
+  mainWindow.on('closed', function() {
+    mainWindow = null;
+  })
 
-    updater.on('ready', () => {
-        let mainWindow = new BrowserWindow({ configWindow });
-        mainWindow.maximize();
-        mainWindow.loadURL('file://' + __dirname + '/index.html')
-        
-        mainWindow.on('closed', function() {
-          mainWindow = null;
-        })
-    })
-
-    updater.on('updateRequired', () => {        
-        app.quit();
-    })
-
-    updater.on('updateAvailable', () => {
-        mainWindow.webContents.send('update-available');
-    })
-    
-    updater.start()
+  mainWindow.loadURL('file://' + __dirname + '/index.html')
 })
-

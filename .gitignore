@@ -9,4 +9,5 @@ node_modules/
 jspm_packages/
 bower_components/
 output/
+electron/src/
 electron/browser/config.js
